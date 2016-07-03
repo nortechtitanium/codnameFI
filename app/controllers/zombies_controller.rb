@@ -22,7 +22,11 @@ class ZombiesController < ApplicationController
         @Z.save
   end
 
-  
+ def destroy
+        delete(3)
+        @Z = Zombie.order(:name)
+        
+ end 
 
   def createzombie
 
@@ -52,6 +56,10 @@ class ZombiesController < ApplicationController
 
   def read(id)
     	@Z = Zombie.find(id)
+  end
+
+  def delete(id)
+    	@Z = Zombie.destroy(id)
   end
  
 

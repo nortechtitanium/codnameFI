@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ZombiesControllerTest < ActionController::TestCase
-  test "should get update" do
-    get :update
+  test "should get destroy" do
+    get :destroy
     assert_response :success
   end
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'zombies/destroy'
+
   get 'zombies/update'
 
   get 'zombies/query'
