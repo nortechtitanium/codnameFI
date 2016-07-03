@@ -7,6 +7,10 @@ class ZombiesController < ApplicationController
   def find
     	@Z = read(1)
   end
+  
+  def findlast
+	@Z = Zombie.last
+  end
 
   def createzombie
 
@@ -27,7 +31,7 @@ class ZombiesController < ApplicationController
   def create(nm, gy)    
       	@Z = Zombie.new(name: nm, graveyard:gy)
      	@Z.save
-   end
+  end
 
   def read(id)
     	@Z = Zombie.find(id)
