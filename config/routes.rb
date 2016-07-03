@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'zombies/createzombie'
+
   get 'zombies/create_table'
   post 'zombies/create_table'
 

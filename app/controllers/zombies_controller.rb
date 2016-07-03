@@ -1,14 +1,18 @@
 class ZombiesController < ApplicationController
 
   def index 
-	#@Z = Zombie.find(2)
-	#@Z.name = "Bob"
-	#@Z.graveyard = "Chapel Hill Cemetery"	
-	#@Z.save 
+ 
   end
 
   def find
-    	@Z = findz_as_id(1)
+    	@Z = read(1)
+  end
+
+  def createzombie
+
+	create("Peti", "EPIC office")
+	@Z = Zombie.last.id
+
   end
 
   def create_table
@@ -20,19 +24,19 @@ class ZombiesController < ApplicationController
   end
 
   protected
-  def create_row(name, gy)
-    
-      	@Z = Zombie.new
-     	@Z.name = @name
-     	@Z.graveyard = @gy
+  def create(nm, gy)    
+      	@Z = Zombie.new(name: nm, graveyard:gy)
      	@Z.save
+   end
 
-	    
-  end
-
-  def findz_as_id(id)
+  def read(id)
     	@Z = Zombie.find(id)
   end
+
+
+
+
+
 end
 
 

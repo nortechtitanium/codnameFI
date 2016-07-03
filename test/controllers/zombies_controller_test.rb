@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class ZombiesControllerTest < ActionController::TestCase
-  test "should get create_table" do
-    get :create_table
+  test "should get createzombie" do
+    get :createzombie
     assert_response :success
   end
 
