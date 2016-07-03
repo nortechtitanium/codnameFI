@@ -13,10 +13,16 @@ class ZombiesController < ApplicationController
   end
 
   def query
-#        @Query = Zombie.order(:name)
         @Z = Zombie.order(:name)
-#        @Zombies = @Query.collect(&:name)
   end
+
+  def update
+        @Z = Zombie.find(3)
+        @Z.graveyard = "Benny Hills Memorial"
+        @Z.save
+  end
+
+  
 
   def createzombie
 
@@ -33,7 +39,12 @@ class ZombiesController < ApplicationController
      	end
   end
 
+
+
+
+
   protected
+
   def create(nm, gy)    
       	@Z = Zombie.new(name: nm, graveyard:gy)
      	@Z.save
@@ -42,7 +53,7 @@ class ZombiesController < ApplicationController
   def read(id)
     	@Z = Zombie.find(id)
   end
-
+ 
 
 
 
