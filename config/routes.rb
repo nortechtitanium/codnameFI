@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'zombies/create_table'
+  post 'zombies/create_table'
+
+  get 'zombies/index'
+
+  get 'zombies/find'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
