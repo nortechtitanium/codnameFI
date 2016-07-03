@@ -1,0 +1,12 @@
+<h1>Zombies#query</h1>
+<p>Find all Zombies ordered by their names.</p>
+id | Name 
+<br>
+---------------
+<br>
+<% @Z.each do |z|  %>
+    <%= z.id %> |
+    <%= z.name %> 
+    <br>
+<% end %>
+

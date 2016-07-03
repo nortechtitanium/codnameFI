@@ -12,6 +12,12 @@ class ZombiesController < ApplicationController
 	@Z = Zombie.last
   end
 
+  def query
+#        @Query = Zombie.order(:name)
+        @Z = Zombie.order(:name)
+#        @Zombies = @Query.collect(&:name)
+  end
+
   def createzombie
 
 	create("Peti", "EPIC office")

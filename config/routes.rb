@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'zombies/query'
+
   get 'zombies/findlast'
 
   get 'zombies/createzombie'
